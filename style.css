@@ -1,0 +1,512 @@
+/* ===========================================
+   Paige Normand Portfolio - style.css
+   Color palette:
+     Navy: #080033
+     Teal: #009999
+     Light bg: #f8f9fa
+     White: #ffffff
+   Fonts: Raleway (body/nav), Playfair Display (headings)
+=========================================== */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+  color: #333;
+  line-height: 1.7;
+  background: #fff;
+}
+
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; display: block; }
+ul { list-style: none; }
+
+/* ---- Layout ---- */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* ---- Header / Nav ---- */
+.site-header {
+  background: #080033;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+}
+
+.nav-link {
+  display: block;
+  padding: 1.1rem 1.4rem;
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.03em;
+  border: 2px solid transparent;
+  transition: background 0.2s, color 0.2s;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  background: #fff;
+  color: #080033;
+}
+
+/* ---- Buttons ---- */
+.btn {
+  display: inline-block;
+  padding: 0.7rem 1.8rem;
+  background: #080033;
+  color: #fff;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 0.05em;
+  border: 2px solid #080033;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  margin-top: 1.2rem;
+}
+
+.btn:hover {
+  background: transparent;
+  color: #080033;
+}
+
+.btn-outline-white {
+  background: transparent;
+  border-color: #fff;
+  color: #fff;
+}
+
+.btn-outline-white:hover {
+  background: #fff;
+  color: #080033;
+}
+
+/* ---- Title bars ---- */
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  color: #080033;
+  margin-bottom: 0.4rem;
+}
+
+.section-title.white { color: #fff; }
+
+.title-bar {
+  width: 60px;
+  height: 3px;
+  background: #080033;
+  margin-bottom: 1.2rem;
+}
+
+.title-bar.teal { background: #009999; }
+
+/* ---- Hero Section ---- */
+.hero-section {
+  padding: 5rem 0 4rem;
+  background: #fff;
+}
+
+.hero-inner {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+
+.hero-photo-wrap {
+  flex: 0 0 280px;
+}
+
+.hero-photo {
+  width: 280px;
+  height: 370px;
+  object-fit: cover;
+  object-position: top;
+}
+
+.hero-text {
+  flex: 1;
+}
+
+.hero-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.5rem;
+  color: #080033;
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 0.5rem;
+  border-bottom: 3px solid #080033;
+  padding-bottom: 0.3rem;
+  display: inline-block;
+}
+
+.hero-subtitle {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #080033;
+  margin-bottom: 1.2rem;
+}
+
+.hero-text p {
+  margin-bottom: 0.8rem;
+  font-size: 1rem;
+  color: #333;
+}
+
+/* ---- Photo Banners ---- */
+.photo-banner {
+  height: 350px;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.banner-conference {
+  background-image: url('images/paige-at-conference.jpg');
+  background-color: #333;
+}
+
+.banner-classroom {
+  background-image: url('images/classroom.jpg');
+  background-color: #555;
+}
+
+/* ---- Content Sections ---- */
+.content-section {
+  padding: 4.5rem 0;
+}
+
+.content-section.bg-light {
+  background: #f8f9fa;
+}
+
+.content-section p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #444;
+  margin-bottom: 0.8rem;
+  max-width: 780px;
+}
+
+/* ---- Split Section ---- */
+.split-section {
+  display: flex;
+  min-height: 500px;
+}
+
+.split-image-col {
+  flex: 0 0 40%;
+  overflow: hidden;
+}
+
+.split-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.split-content-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.split-block {
+  padding: 3rem 3rem;
+  flex: 1;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.split-block:last-child { border-bottom: none; }
+
+.split-block p {
+  font-size: 0.98rem;
+  color: #444;
+  line-height: 1.75;
+  margin-bottom: 0.6rem;
+}
+
+.feature-list {
+  list-style: none;
+  margin: 0.6rem 0 1rem;
+}
+
+.feature-list li {
+  padding: 0.3rem 0 0.3rem 1.2rem;
+  position: relative;
+  font-size: 0.95rem;
+  color: #444;
+}
+
+.feature-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 6px;
+  height: 6px;
+  background: #009999;
+  border-radius: 50%;
+}
+
+/* ---- Production Section ---- */
+.production-section {
+  padding: 5rem 0;
+  background: #080033;
+}
+
+.production-section p {
+  color: rgba(255,255,255,0.85);
+  font-size: 1rem;
+  line-height: 1.8;
+  max-width: 720px;
+  margin-bottom: 0;
+}
+
+/* ---- Testimonials ---- */
+.testimonial-box {
+  background: #fff;
+  border-left: 4px solid #009999;
+  padding: 2rem 2.5rem;
+  margin-top: 1.5rem;
+  max-width: 900px;
+}
+
+.testimonial-box blockquote p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #444;
+  margin-bottom: 0.8rem;
+}
+
+.testimonial-box cite {
+  font-style: italic;
+  color: #009999;
+  font-size: 0.95rem;
+  display: block;
+  margin-top: 0.8rem;
+}
+
+/* ---- Contact Section ---- */
+.contact-section {
+  padding: 4.5rem 0;
+  background: #fff;
+}
+
+.contact-inner {
+  display: flex;
+  gap: 4rem;
+  align-items: flex-start;
+}
+
+.contact-form-col {
+  flex: 1;
+}
+
+.contact-form-col p {
+  color: #555;
+  margin-bottom: 1.2rem;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  max-width: 500px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 0.7rem 1rem;
+  border: 1px solid #ccc;
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.95rem;
+  width: 100%;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #009999;
+}
+
+.contact-links-col {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  padding-top: 5rem;
+}
+
+.icon-link {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  color: #080033;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: color 0.2s;
+}
+
+.icon-link:hover { color: #009999; }
+
+/* ---- Footer ---- */
+.site-footer {
+  background: #080033;
+  color: rgba(255,255,255,0.8);
+  padding: 2rem 0;
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-copy { font-size: 0.9rem; }
+
+.footer-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.footer-links a {
+  color: rgba(255,255,255,0.8);
+  font-size: 0.9rem;
+  transition: color 0.2s;
+}
+
+.footer-links a:hover { color: #009999; }
+
+/* ---- Sub-page hero ---- */
+.page-hero {
+  background: #080033;
+  color: #fff;
+  padding: 4rem 0 3rem;
+}
+
+.page-hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.page-hero p {
+  font-size: 1.1rem;
+  max-width: 700px;
+  opacity: 0.85;
+  line-height: 1.7;
+}
+
+/* ---- Sub-page content ---- */
+.page-section {
+  padding: 4rem 0;
+}
+
+.page-section.alt { background: #f8f9fa; }
+
+.page-section h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  color: #080033;
+  margin-bottom: 0.4rem;
+}
+
+.page-section p {
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.8;
+  max-width: 800px;
+  margin-bottom: 0.8rem;
+}
+
+.page-section ul {
+  list-style: disc;
+  padding-left: 1.5rem;
+  margin: 0.8rem 0;
+}
+
+.page-section ul li {
+  margin-bottom: 0.4rem;
+  color: #444;
+  font-size: 0.98rem;
+}
+
+.pub-list {
+  list-style: none !important;
+  padding-left: 0 !important;
+}
+
+.pub-list li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #e9ecef;
+  font-size: 0.95rem !important;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid #e9ecef;
+  padding: 1.5rem;
+  border-top: 3px solid #009999;
+}
+
+.card h3 {
+  font-family: 'Playfair Display', serif;
+  color: #080033;
+  margin-bottom: 0.5rem;
+}
+
+.card p { font-size: 0.95rem; color: #555; }
+
+/* ---- Responsive ---- */
+@media (max-width: 768px) {
+  .hero-inner { flex-direction: column; gap: 2rem; }
+  .hero-photo-wrap { flex: unset; }
+  .hero-photo { width: 100%; height: 280px; }
+  .hero-name { font-size: 2.5rem; }
+  
+  .split-section { flex-direction: column; }
+  .split-image-col { flex: unset; height: 280px; }
+  .split-block { padding: 2rem 1.5rem; }
+  
+  .contact-inner { flex-direction: column; gap: 2rem; }
+  .contact-links-col { padding-top: 0; flex-direction: row; flex-wrap: wrap; }
+  
+  .footer-inner { flex-direction: column; gap: 1rem; text-align: center; }
+  
+  .nav-list { flex-wrap: wrap; }
+  .nav-link { padding: 0.8rem 1rem; font-size: 0.85rem; }
+  
+  .photo-banner { background-attachment: scroll; }
+}
